@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: devops-bootcamp-springboot
+  name: devops-bootcamp-springboot
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: devops-bootcamp-springboot
+  template:
+    metadata:
+      labels:
+        app: devops-bootcamp-springboot
+    spec:
+      imagePullSecrets:
+        - name: bootcamp-pull-secret
+      containers:
+      - image: INSERT IMAGE NAME HERE
+        imagePullPolicy: Always
+        name: devops-bootcamp-springboot
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        resources:
+          limits:
+            memory: 200Mi
+            cpu: 500m
+          requests:
+            memory: 100Mi
+            cpu: 100m
+        securityContext:
+          privileged: false

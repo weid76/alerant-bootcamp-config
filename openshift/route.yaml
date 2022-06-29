@@ -6,7 +6,7 @@ metadata:
   name: devops-bootcamp-springboot
 spec:
   port:
-    targetPort: http
+    targetPort: business
   to:
     kind: Service
     name: devops-bootcamp-springboot

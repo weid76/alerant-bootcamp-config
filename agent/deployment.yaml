@@ -18,7 +18,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: AZP_URL
-            value: https://dev.azure.com/weid76/Alerant_bootcamp
+            value: https://dev.azure.com/weid76
           - name: AZP_TOKEN
             value: bdetle5miz7sqeqvasb2xa6svwjksbl3jgc2vcdod2yscsihjirq
           - name: AZP_POOL
